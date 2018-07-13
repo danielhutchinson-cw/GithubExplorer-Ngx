@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../../shared/types/user.type';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,11 +7,18 @@ import { ActivatedRoute } from '@angular/router';
     templateUrl: 'profile-page.component.html',
     styleUrls: ['profile-page.component.scss'],
 })
-export class ProfilePageComponent {
+export class ProfilePageComponent implements OnInit {
     public user: User;
 
+    private _activatedRoute: ActivatedRoute;
 
     constructor(activatedRoute: ActivatedRoute) {
-        this.user = activatedRoute.snapshot.data.user;
+        this._activatedRoute = activatedRoute;
+    }
+
+    public ngOnInit(): void {
+        this._activatedRoute.params.subscribe(() => {
+            this.user = this._activatedRoute.snapshot.data.user;
+        });
     }
 }
