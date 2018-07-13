@@ -1,0 +1,47 @@
+<main class="container" *ngIf="user">
+    <div class="row">
+        <div class="col-3">
+            <img [src]="user.avatarUrl" class="img-fluid user-avatar" alt="User Avatar">
+            <div class="text-center my-2">
+                <h4 class="user-name">
+                    <strong class="d-block mb-1">{{user.name}}</strong>
+                    <span class="text-muted font-weight-light">{{user.username}}</span>
+                </h4>
+            </div>
+
+            <ul class="my-3 list-unstyled details">
+                <li>
+                    <app-icon iconName="briefcase">{{user.company}}</app-icon>
+                </li>
+                <li>
+                    <app-icon iconName="map-pin">{{user.location}}</app-icon>
+                </li>
+                <li>
+                    <app-icon iconName="clock">{{user.createdAt | date:'dd MMM, yyyy'}}</app-icon>
+                </li>
+            </ul>
+
+            <p class="my-2">{{user.biography}}</p>
+        </div>
+
+        <div class="col-9">
+            <div class="card mb-3">
+                <div class="card-body d-flex justify-content-around">
+                    <div>
+                        <app-icon iconName="star">100</app-icon>
+                    </div>
+
+                    <div>
+                        <app-icon iconName="package">{{user.publicRepositoriesCount}}</app-icon>
+                    </div>
+
+                    <div>
+                        <app-icon iconName="users">{{user.followersCount}}</app-icon>
+                    </div>
+                </div>
+            </div>
+
+            <repositories-list [repositories]="user.repositories"></repositories-list>
+        </div>
+    </div>
+</main>

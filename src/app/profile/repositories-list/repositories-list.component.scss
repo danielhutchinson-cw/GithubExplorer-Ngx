@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+
+.repositories {
+    .list-group-item-action:hover {
+        cursor: pointer;
+    }
+
+    p {
+        line-height: 2;
+        margin: 0;
+
+        span {
+            font-size: 0.9em;
+        }
+    }
+}

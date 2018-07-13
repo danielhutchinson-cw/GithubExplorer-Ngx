@@ -1,0 +1,12 @@
+<div class="my-4">
+    <app-icon iconName="package"><h5>Repositories</h5></app-icon>
+</div>
+
+<div class="list-group repositories">
+    <a class="list-group-item list-group-item-action" *ngFor="let repository of repositories">
+        <h6><strong class="mr-2">{{repository.name}}</strong> <span class="text-muted">{{repository.description}}</span></h6>
+        <p class="text-muted">
+            <small>Last updated {{repository.updatedAt}}</small>
+        </p>
+    </a>
+</div>
