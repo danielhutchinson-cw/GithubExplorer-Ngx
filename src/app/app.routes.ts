@@ -9,5 +9,9 @@ export const appRoutes: Routes = [
         resolve: {
             user: UserProfileResolver
         }
+    },
+    {
+        path: '**',
+        redirectTo: '/thelastborker'
     }
 ];
