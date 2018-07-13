@@ -4,7 +4,7 @@ import { UserProfileResolver } from './shared/resolvers/user-profile.resolver';
 
 export const appRoutes: Routes = [
     {
-        path: '',
+        path: ':username',
         component: ProfilePageComponent,
         resolve: {
             user: UserProfileResolver

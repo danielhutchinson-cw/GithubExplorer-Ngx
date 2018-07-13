@@ -13,6 +13,6 @@ export class UserProfileResolver implements Resolve<User> {
     }
 
     public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<User> {
-        return this._githubService.getUserWithRepositories('thelastborker');
+        return this._githubService.getUserWithRepositories(route.params.username);
     }
 }
