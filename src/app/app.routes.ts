@@ -6,6 +6,7 @@ export const appRoutes: Routes = [
     {
         path: ':username',
         component: ProfilePageComponent,
+        runGuardsAndResolvers: 'paramsChange',
         resolve: {
             user: UserProfileResolver
         }

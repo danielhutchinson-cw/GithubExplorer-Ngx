@@ -6,6 +6,7 @@ import { GithubApiService } from './services/github/github.api.service';
 import { GithubService } from './services/github/github.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserProfileResolver } from './resolvers/user-profile.resolver';
+import { FormsModule } from '@angular/forms';
 
 const declarations = [
     NavbarComponent,
@@ -18,10 +19,12 @@ const declarations = [
     ],
     imports: [
         HttpClientModule,
+        FormsModule,
         BrowserModule
     ],
     exports: [
         BrowserModule,
+        FormsModule,
         ...declarations
     ],
     providers: [
