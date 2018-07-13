@@ -11,10 +11,7 @@ import { SharedModule } from '../shared/shared.module';
     imports: [
         SharedModule
     ],
-    exports: [
-        ProfilePageComponent,
-        RepositoriesListComponent
-    ],
+    exports: [],
     providers: [],
 })
 export class ProfileModule {
