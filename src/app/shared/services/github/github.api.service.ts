@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 export class GithubApiService {
     private _httpClient: HttpClient;
     private GITHUB_API_URL = 'https://api.github.com';
-    private AUTH_TOKEN = 'token efd469a0e9b97e7d57a5d263fdca8720e06dacf5';
 
     constructor(httpClient: HttpClient) {
         this._httpClient = httpClient;
@@ -16,7 +15,7 @@ export class GithubApiService {
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
-                'Authorization': this.AUTH_TOKEN
+                'Authorization': 'token e57cd2245a3c6aa2dcf40403696c524e65a3140e'
             })
         };
 
@@ -27,7 +26,7 @@ export class GithubApiService {
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
-                'Authorization': this.AUTH_TOKEN
+                'Authorization': 'token e57cd2245a3c6aa2dcf40403696c524e65a3140e'
             })
         };
 
