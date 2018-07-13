@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GithubApiService } from './services/github/github.api.service';
 import { GithubService } from './services/github/github.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { UserProfileResolver } from './resolvers/user-profile.resolver';
 
 const declarations = [
     NavbarComponent,
@@ -25,7 +26,9 @@ const declarations = [
     ],
     providers: [
         GithubApiService,
-        GithubService
+        GithubService,
+
+        UserProfileResolver
     ],
 })
 export class SharedModule {
